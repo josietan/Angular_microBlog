@@ -7,7 +7,7 @@
 * 最后，借助socketio来开发websocket,来实现微博更新后的实时提醒。
 
 # 项目文件夹：
-	该项目的文件夹结构如下所示：<br>
+该项目的文件夹结构如下所示：<br>
     ```javascript
 		┠ app.js	 nodejs的运行文件
 		┠ models	nodejs模型，里面放Mongoose数据库模型
@@ -24,7 +24,7 @@
 		┠   static	所有不需要跨域就能请求的静态资源比如images、css、js库等等。
 	```
 # 项目特点
-	## 功能
+## 功能
 		* 注册会员
 		* 验证登录
 		* 发表微博
@@ -36,29 +36,30 @@
 		* 个人主页能看见时间线
 		* 个人一句话签名、站内信、头像系统(支持头像剪裁,借助graphicsmagick)
 
-	## 此项目使用的是SPA;
-	## 路由是RESTful风格。
+## 此项目使用的是SPA;
+## 路由是RESTful风格。
 	所谓的RESTful路由风格,简单老说就是利用HTTP的四种请求：GET（获取资源）、POST（新建资源，也可以用于更新资源）、PUT（更新资源）、DELETE（删除资源），来实现资源表现层的状态转换（Representational State Transfer）
-。一下是改项目的路由：
+。<br>
+以下是改项目的路由：
 	```javascript
-	app.get("/" , router.showIndex);
-	app.use("/static",express.static("static"));
+	app.get("/" , router.showIndex);<br>
+	app.use("/static",express.static("static"));<br>
 	app.use("/app",express.static("ngApp"));
-	app.get("/checkuser",router.checkuser);         //判断用户是否存在
-	app.post("/user",router.addUser);               //添加用户
-	app.post("/login",router.login)                 //登录
-	app.get("/checklogin",router.checklogin);       //检查是否已经登录
-	app.get("/logout",router.logout);               //退出登录
-	app.get("/user/:email",router.getuser);         //查询某个用户的资料
-	app.post("/user/:email",router.updateuser);     //查询某个用户的资料
-	app.post("/up",router.up);                      //上传头像
-	app.post("/cut",router.cut);                    //裁切头像
-	app.post("/posts/",function(req,res){
-		router.fabiao(req,res,io);
-	});                                             //发表说说
-	app.get("/posts/",router.getAllPost);           //得到所有说说
-	app.get("/posts/:id",router.getthepost);         //得到某一个说说
-	app.post("/comment/:id",router.postcomment);     //评论某一个帖子
+	app.get("/checkuser",router.checkuser);         //判断用户是否存在<br>
+	app.post("/user",router.addUser);               //添加用户<br>
+	app.post("/login",router.login)                 //登录<br>
+	app.get("/checklogin",router.checklogin);       //检查是否已经登录<br>
+	app.get("/logout",router.logout);               //退出登录<br>
+	app.get("/user/:email",router.getuser);         //查询某个用户的资料<br>
+	app.post("/user/:email",router.updateuser);     //查询某个用户的资料<br>
+	app.post("/up",router.up);                      //上传头像<br>
+	app.post("/cut",router.cut);                    //裁切头像<br>
+	app.post("/posts/",function(req,res){<br>
+		router.fabiao(req,res,io);<br>
+	});                                             //发表说说<br>
+	app.get("/posts/",router.getAllPost);           //得到所有说说<br>
+	app.get("/posts/:id",router.getthepost);         //得到某一个说说<br>
+	app.post("/comment/:id",router.postcomment);     //评论某一个帖子<br>
 	```
 # 项目起步
 ### 安装node & npm
