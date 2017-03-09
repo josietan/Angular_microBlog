@@ -38,7 +38,8 @@
 
 ## 此项目使用的是SPA;
 ## 路由是RESTful风格。
-	所谓的RESTful路由风格,简单老说就是利用HTTP的四种请求：GET（获取资源）、POST（新建资源，也可以用于更新资源）、PUT（更新资源）、DELETE（删除资源），来实现资源表现层的状态转换（Representational State Transfer）
+	所谓的RESTful路由风格,简单老说就是利用HTTP的四种请求：GET（获取资源）、POST（新建资源，也可以用于更新资源）、PUT（更新资源）、<br>
+	DELETE（删除资源），来实现资源表现层的状态转换（Representational State Transfer）
 。<br>
 以下是改项目的路由：
 ```javascript
