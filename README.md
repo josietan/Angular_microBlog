@@ -8,7 +8,7 @@
 
 # 项目文件夹：
 该项目的文件夹结构如下所示：<br>
-    ```javascript
+```javascript
 		┠ app.js	 nodejs的运行文件
 		┠ models	nodejs模型，里面放Mongoose数据库模型
 		┠ ngApp	Angular的前端脚本，这个文件夹需要Express提供静态化。文件夹里面有Angular的四大金刚和index.html页面
@@ -22,7 +22,7 @@
 		┃ ┠ index.html	 唯一的单页面，有的公司喜欢把index.html放到最外层文件夹中
 		┠   routes	nodejs路由，控制器
 		┠   static	所有不需要跨域就能请求的静态资源比如images、css、js库等等。
-	```
+```
 # 项目特点
 ## 功能
 		* 注册会员
